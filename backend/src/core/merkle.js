@@ -30,7 +30,7 @@ function isValidSHA256Hex(hash) {
  * @returns {string} Parent hash (hex string).
  */
 function hashPair(leftHex, rightHex) {
-  const leftBuffer = Buffer.from(leftHex, 'hex');
+  const leftBuffer  = Buffer.from(leftHex, 'hex');
   const rightBuffer = Buffer.from(rightHex, 'hex');
 
   return createHash('sha256')
