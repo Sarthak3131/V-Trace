@@ -7,20 +7,39 @@
     "test": "tests"
   },
   "scripts": {
-  "dev": "nodemon src/server.js",
-  "start": "node src/server.js",
-  "test": "jest --detectOpenHandles"
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js",
+    "seed": "node src/scripts/seed.js",
+    "test": "jest --runInBand"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.1063.0",
+    "@aws-sdk/s3-request-presigner": "^3.1063.0",
+    "@google/generative-ai": "^0.24.1",
+    "adm-zip": "^0.5.17",
+    "bcrypt": "^5.1.1",
     "bcryptjs": "^3.0.3",
+    "bullmq": "^5.8.1",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
     "dotenv": "^17.3.1",
+    "envalid": "^8.1.1",
     "express": "^5.2.1",
+    "express-rate-limit": "^7.5.1",
+    "express-validator": "^7.2.1",
+    "helmet": "^8.1.0",
     "jsonwebtoken": "^9.0.3",
-    "mongoose": "^9.2.3"
+    "mammoth": "^1.12.0",
+    "mongoose": "^9.2.3",
+    "morgan": "^1.10.1",
+    "multer": "^2.1.1",
+    "pdf-parse": "^2.4.5",
+    "winston": "^3.19.0",
+    "ws": "^8.21.0"
   },
   "devDependencies": {
     "jest": "^30.2.0",
