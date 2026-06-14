@@ -866,7 +866,7 @@ async function analyzeResume(req, res, next) {
     // Detect if tech role to trigger GitHub risk checks
     const isTechRole = localJdSkills.length > 2 || localResumeSkills.length > 2;
 
-    if (process.env.GEMINI_API_KEY && process.env.GEMINI_API_KEY !== 'DUMMY_KEY') {
+    if (process.env.NODE_ENV !== 'test' && process.env.GEMINI_API_KEY && process.env.GEMINI_API_KEY !== 'DUMMY_KEY') {
       try {
         const { GoogleGenerativeAI } = require('@google/generative-ai');
         const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
